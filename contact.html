@@ -1498,32 +1498,337 @@ footer {
       </div>
       <div class="contact-form-box">
         <h3>Send an Inquiry</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your Name *</label>
-            <input type="text" id="inquiryName" placeholder="Full name">
-          </div>
-          <div class="form-group">
-            <label>Email *</label>
-            <input type="email" id="inquiryEmail" placeholder="your@email.com">
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Subject</label>
-          <select id="inquirySubject">
-            <option>General Inquiry</option>
-            <option>Admissions Question</option>
-            <option>Portal Technical Support</option>
-            <option>Program Information</option>
-            <option>Tuition & Scholarships</option>
-            <option>Faculty Contact</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Message *</label>
-          <textarea rows="5" id="inquiryMessage" placeholder="Type your message here..."></textarea>
-        </div>
-        <button class="btn btn-gold" style="width:100%;justify-content:center;font-size:16px;" onclick="sendInquiry()">Send Message →</button>
+        <!-- Note :
+   - You can modify the font style and form style to suit your website. 
+   - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
+   - The Mandatory check script can modified as to suit your business needs. 
+   - It is important that you test the modified form before going live.-->
+<div id = 'crmWebToEntityForm' class = 'zcwf_lblLeft crmWebToEntityForm' style = 'background-color: white;color: black;max-width: 600px;'>
+			<form id = 'webform7457404000000610575' action = 'https://crm.zoho.com/crm/WebToLeadForm' name = WebToLeads7457404000000610575 method = 'POST' onSubmit = 'javascript:document.charset="UTF-8"; return checkMandatory7457404000000610575()' accept-charset = 'UTF-8'>
+				<input type = 'text' style = 'display:none;' name = 'xnQsjsdp' value = '5c0a957bcb3915054a2278c4a60b45211283dc33dc238a5049bda6b0dc23241b'>
+				</input>
+				<input type = 'hidden' name = 'zc_gad' id = 'zc_gad' value = ''>
+				</input>
+				<input type = 'text' style = 'display:none;' name = 'xmIwtLD' value = '50057726da4aa029d5d4aae06bd4929a5ceb114561bede98d3fe3292e13cc53051f5405b3439393654826448570be2fb'>
+				</input>
+				<input type = 'text' style = 'display:none;' name = 'actionType' value = 'TGVhZHM='>
+				</input>
+				<input type = 'text' style = 'display:none;' name = 'returnURL' value = 'https://aimtechchristiancollege.com/thank-you'>
+				</input>
+				<!-- Do not remove this code. -->
+				<style>
+					.formsubmit.zcwf_button{
+						color: white !important;
+						background: transparent linear-gradient(0deg, #0279FF 0%, #00A3F3 100%);
+					}
+					#crmWebToEntityForm.zcwf_lblLeft{
+						width: 100%;
+						padding: 25px;
+						margin: 0 auto;
+						box-sizing: border-box;
+					}
+					#crmWebToEntityForm.zcwf_lblLeft *{
+						box-sizing: border-box;
+					}
+					#crmWebToEntityForm{
+						text-align: left;
+					}
+					#crmWebToEntityForm *{
+						direction: ltr;
+					}
+					.zcwf_lblLeft .zcwf_title{
+						word-wrap: break-word;
+						padding: 0px 6px 10px;
+						font-weight: bold }
+					.zcwf_lblLeft.cpT_primaryBtn:hover{
+						background: linear-gradient(#02acff 0,#006be4 100%)no-repeat padding-box !important;
+						box-shadow: 0 -2px 0 0  #0159b9 inset !important;
+						border: 0 !important;
+						color:  #fff !important;
+						outline: 0 !important;
+					}
+					.zcwf_lblLeft .zcwf_col_fld input[ type  = text], input[ type  = password], .zcwf_lblLeft .zcwf_col_fld textarea{
+						width: 60%;
+						border: 1px solid  #c0c6cc !important;
+						resize: vertical;
+						border-radius: 2px;
+						float: left;
+					}
+					.zcwf_lblLeft .zcwf_col_lab{
+						width: 30%;
+						word-break: break-word;
+						padding: 0px 6px 0px;
+						margin-right: 10px;
+						margin-top: 5px;
+						float: left;
+						min-height: 1px;
+					}
+					.zcwf_lblLeft .zcwf_col_fld{
+						float: left;
+						width: 68%;
+						padding: 0px 6px 0px;
+						position: relative;
+						margin-top: 5px;
+					}
+					.zcwf_lblLeft .zcwf_privacy{
+						padding: 6px;
+					}
+					.zcwf_lblLeft .wfrm_fld_dpNn{
+						display: none;
+					}
+					.dIB{
+						display: inline-block;
+					}
+					.zcwf_lblLeft .zcwf_col_fld_slt{
+						width: 60%;
+						border: 1px solid  #ccc;
+						background:  #fff;
+						border-radius: 4px;
+						font-size: 12px;
+						float: left;
+						resize: vertical;
+						padding: 2px 5px;
+					}
+					.zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after{
+						content: '';
+						display: table;
+						clear: both;
+					}
+					.zcwf_lblLeft .zcwf_col_help{
+						float: left;
+						margin-left: 7px;
+						font-size: 12px;
+						max-width: 35%;
+						word-break: break-word;
+					}
+					.zcwf_lblLeft .zcwf_help_icon{
+						cursor: pointer;
+						width: 16px;
+						height: 16px;
+						display: inline-block;
+						background:  #fff;
+						border: 1px solid  #c0c6cc;
+						color:  #c1c1c1;
+						text-align: center;
+						font-size: 11px;
+						line-height: 16px;
+						font-weight: bold;
+						border-radius: 50%;
+					}
+					.zcwf_lblLeft .zcwf_row{
+						margin: 15px 0px;
+					}
+					.zcwf_lblLeft .formsubmit{
+						margin-right: 5px;
+						cursor: pointer;
+						color:  #313949;
+						font-size: 12px;
+					}
+					.zcwf_lblLeft .zcwf_privacy_txt{
+						width: 90%;
+						color: rgb(0, 0, 0);
+						font-size: 12px;
+						font-family: Arial;
+						display: inline-block;
+						vertical-align: top;
+						color:  #313949;
+						padding-top: 2px;
+						margin-left: 6px;
+					}
+					.zcwf_lblLeft .zcwf_button{
+						font-size: 12px;
+						color:  #313949;
+						border: 1px solid  #c0c6cc;
+						padding: 3px 9px;
+						border-radius: 4px;
+						cursor: pointer;
+						max-width: 120px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+					.zcwf_lblLeft .zcwf_tooltip_over{
+						position: relative;
+					}
+					.zcwf_lblLeft .zcwf_tooltip_ctn{
+						position: absolute;
+						background:  #dedede;
+						padding: 3px 6px;
+						top: 3px;
+						border-radius: 4px;
+						word-break: break-word;
+						min-width: 100px;
+						max-width: 150px;
+						color:  #313949;
+						z-index: 100;
+					}
+					.zcwf_lblLeft .zcwf_ckbox{
+						float: left;
+					}
+					.zcwf_lblLeft .zcwf_file{
+						width: 55%;
+						box-sizing: border-box;
+						float: left;
+					}
+					.cBoth:after{
+						content: '';
+						display: block;
+						clear: both;
+					}
+					@media all and  (max-width: 600px){
+						.zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld{
+							width: auto;
+							float: none !important;
+						}
+						.zcwf_lblLeft .zcwf_col_help{
+							width: 40%;
+						}
+					}
+				</style>
+				<div class = 'zcwf_title' style = 'max-width: 600px;color: black; font-family:Arial;'>Inquiry</div>
+				<div class = 'zcwf_row'>
+					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+						<label for = 'First_Name'>First Name</label>
+					</div>
+					<div class = 'zcwf_col_fld'>
+						<input type = 'text' id = 'First_Name' aria-required = 'false' aria-label = 'First Name' name = 'First Name' aria-valuemax = '40' maxlength = '40'>
+						</input>
+						<div class = 'zcwf_col_help'>
+						</div>
+					</div>
+				</div>
+				<div class = 'zcwf_row'>
+					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+						<label for = 'Last_Name'>Last Name
+							<span style = 'color:red;'>*</span>
+						</label>
+					</div>
+					<div class = 'zcwf_col_fld'>
+						<input type = 'text' id = 'Last_Name' aria-required = 'true' aria-label = 'Last Name' name = 'Last Name' aria-valuemax = '80' maxlength = '80'>
+						</input>
+						<div class = 'zcwf_col_help'>
+						</div>
+					</div>
+				</div>
+				<div class = 'zcwf_row'>
+					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+						<label for = 'Email'>Email</label>
+					</div>
+					<div class = 'zcwf_col_fld'>
+						<input type = 'text' ftype = 'email' autocomplete = 'false' id = 'Email' aria-required = 'false' aria-label = 'Email' name = 'Email' aria-valuemax = '100' crmlabel = '' maxlength = '100'>
+						</input>
+						<div class = 'zcwf_col_help'>
+						</div>
+					</div>
+				</div>
+				<div class = 'zcwf_row'>
+					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+						<label for = 'Description'>Description</label>
+					</div>
+					<div class = 'zcwf_col_fld'>
+						<textarea style = 'font-family: Arial, sans-serif;' aria-multiline = 'true' id = 'Description' aria-required = 'false' aria-label = 'Description' name = 'Description'></textarea>
+						<div class = 'zcwf_col_help'>
+						</div>
+					</div>
+				</div>
+				<input type = 'text' type = 'hidden' style = 'display: none;' name = 'aG9uZXlwb3Q' value = ''/>
+				<div class = 'zcwf_row'>
+					<div class = 'zcwf_col_lab'>
+					</div>
+					<div class = 'zcwf_col_fld'>
+						<input type = 'submit' id = 'formsubmit' role = 'button' class = 'formsubmit zcwf_button' value = 'Submit' aria-label = 'Submit' title = 'Submit'>
+							<input type = 'reset' class = 'zcwf_button' role = 'button' name = 'reset' value = 'Reset' aria-label = 'Reset' title = 'Reset'>
+							</div>
+						</div>
+						<script>
+							function validateEmail7457404000000610575(){
+								var form = document.forms['WebToLeads7457404000000610575'];
+								var emailFld = form.querySelectorAll('[ftype=email]');
+								var i;
+								for(i = 0; i < emailFld.length; i++ ) {
+									var emailVal = emailFld[i].value;
+									if ((emailVal.replace (/^\s+|\s+$/g,'') ) .length != 0) {
+										var atpos = emailVal.indexOf('@');
+										var dotpos = emailVal.lastIndexOf('.');
+										if(atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length) {
+											alert('Please enter a valid email address. ');
+											emailFld[i].focus();
+											return false;
+										}
+									}
+								}
+								return true;
+							}
+							function checkMandatory7457404000000610575(isAjax){
+								var mndFileds = new Array('Last Name');
+								var fldLangVal = new Array('Last Name');
+								for (i = 0; i < mndFileds.length; i++ ) {
+									var fieldObj = document.forms['WebToLeads7457404000000610575'] [mndFileds[i]];
+									if (fieldObj) {
+										if(((fieldObj.value) .replace (/^\s+|\s+$/g,'') ) .length == 0) {
+											if (fieldObj.type == 'file') {
+												alert('Please select a file to upload.');
+												fieldObj.focus();
+												return false;
+											}
+											alert(fldLangVal[i] + ' cannot be empty.');
+											fieldObj.focus();
+											return false;
+										} else if (fieldObj.nodeName == 'SELECT') {
+											if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
+												alert(fldLangVal[i] + ' cannot be none.');
+												fieldObj.focus();
+												return false;
+											}
+										} else if (fieldObj.type == 'checkbox') {
+											if (fieldObj.checked == false) {
+												alert('Please accept  ' + fldLangVal[i]);
+												fieldObj.focus();
+												return false;
+											}
+										}
+										try{
+											if (fieldObj.name == 'Last Name') {
+												name = fieldObj.value;
+											}
+										} catch (e){}
+									}
+								}
+								if ( !validateEmail7457404000000610575 () ) {
+									return false;
+								}
+								var urlparams = new URLSearchParams(window.location.search);
+								if (urlparams.has ('service') && (urlparams.get ('service') === 'smarturl') ) {
+									var webform = document.getElementById('webform7457404000000610575');
+									var service = urlparams.get('service');
+									var smarturlfield = document.createElement('input');
+									smarturlfield.setAttribute('type', 'hidden');
+									smarturlfield.setAttribute('value', service);
+									smarturlfield.setAttribute('name', 'service');
+									webform.appendChild(smarturlfield);
+								}
+								document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+							}
+							function tooltipShow7457404000000610575(el){
+								var tooltip = el.nextElementSibling;
+								var tooltipDisplay = tooltip.style.display;
+								if (tooltipDisplay == 'none') {
+									var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+									for (i = 0; i < allTooltip.length; i++ ) {
+										allTooltip[i].style.display = 'none';
+									}
+									tooltip.style.display = 'block';
+								} else {
+									tooltip.style.display = 'none';
+								}
+							}
+						</script>
+						<!-- Do not remove this --- Analytics Tracking code starts -->
+						<script id = 'wf_anal' src = 'https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=d2e0158bbceaa1960916b7051d9be232b661e742cac23856b7f202998319fd5c76358b9c2735ddd9c1c2b2aea7554fe4giddf3bd9a469feb9c6430df7861a691e3bfbf31c8103b80bad6f840dde720f586egid6cddd408cc3077cd3ba9aefa25538bb690fe30fae6226f492e45954860fba78egid4a99a3c7c3b15f4ebd77da622cf265e4a91e971bb3dc8a5ca59a3fe72f1f4868&tw=43570e4a2ef8bde76f1976451ad76c50ed5ddc7258d3f0aac3e71b80c05e47bc'>
+					</script>
+					<!-- Do not remove this --- Analytics Tracking code ends. -->
+				</form>
+      </div>
       </div>
     </div>
   </div>
@@ -1661,21 +1966,6 @@ function submitApplication() {
   alert('Thank you for your application! Our admissions team will contact you within 2–3 business days. God bless you!');
 }
 
-function sendInquiry() {
-  const name = document.getElementById('inquiryName')?.value.trim() || '';
-  const email = document.getElementById('inquiryEmail')?.value.trim() || '';
-  const subject = document.getElementById('inquirySubject')?.value || 'General Inquiry';
-  const message = document.getElementById('inquiryMessage')?.value.trim() || '';
-  const body = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    '',
-    message
-  ].join('\n');
-
-  window.location.href = `mailto:inquiry@aimtechchristiancollege.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
-
 function launchMoodle() {
   // Replace with actual Moodle URL
   window.open('https://moodle.aimtechchristiancollege.com', '_blank');
@@ -1700,9 +1990,6 @@ document.querySelectorAll('.program-card, .mode-card, .faculty-card, .testimonia
 </script>
 </body>
 </html>
-
-
-
 
 
 
