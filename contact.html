@@ -1685,6 +1685,112 @@ footer {
 						}
 					}
 				</style>
+				<style>
+					.contact-form-box #crmWebToEntityForm{
+						background: transparent !important;
+						color: var(--dark) !important;
+						max-width: none !important;
+						width: 100% !important;
+						padding: 0 !important;
+						margin: 0 !important;
+						font-family: 'Inter', sans-serif !important;
+					}
+					.contact-form-box #crmWebToEntityForm .zcwf_title{
+						display: none !important;
+					}
+					.contact-form-box #crmWebToEntityForm .zcwf_row{
+						margin: 0 0 18px !important;
+					}
+					.contact-form-box #crmWebToEntityForm .zcwf_col_lab,
+					.contact-form-box #crmWebToEntityForm .zcwf_col_fld{
+						float: none !important;
+						width: 100% !important;
+						padding: 0 !important;
+						margin: 0 !important;
+					}
+					.contact-form-box #crmWebToEntityForm .zcwf_col_lab{
+						margin-bottom: 8px !important;
+					}
+					.contact-form-box #crmWebToEntityForm .zcwf_col_lab label{
+						color: var(--dark) !important;
+						font-family: 'Inter', sans-serif !important;
+						font-size: 14px !important;
+						font-weight: 700 !important;
+					}
+					.contact-form-box #crmWebToEntityForm .zcwf_col_fld input[type="text"],
+					.contact-form-box #crmWebToEntityForm .zcwf_col_fld input[ftype="email"],
+					.contact-form-box #crmWebToEntityForm .zcwf_col_fld textarea{
+						background: var(--white) !important;
+						border: 1px solid rgba(26,58,143,0.16) !important;
+						border-radius: 8px !important;
+						box-shadow: none !important;
+						color: var(--dark) !important;
+						float: none !important;
+						font-family: 'Inter', sans-serif !important;
+						font-size: 15px !important;
+						line-height: 1.5 !important;
+						min-height: 48px !important;
+						outline: none !important;
+						padding: 12px 14px !important;
+						transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+						width: 100% !important;
+					}
+					.contact-form-box #crmWebToEntityForm .zcwf_col_fld textarea{
+						min-height: 132px !important;
+						resize: vertical !important;
+					}
+					.contact-form-box #crmWebToEntityForm .zcwf_col_fld input[type="text"]:focus,
+					.contact-form-box #crmWebToEntityForm .zcwf_col_fld input[ftype="email"]:focus,
+					.contact-form-box #crmWebToEntityForm .zcwf_col_fld textarea:focus{
+						border-color: var(--royal-blue) !important;
+						box-shadow: 0 0 0 4px rgba(26,58,143,0.1) !important;
+					}
+					.contact-form-box #crmWebToEntityForm .zcwf_col_help{
+						display: none !important;
+					}
+					.contact-form-box #crmWebToEntityForm .zcwf_button{
+						align-items: center !important;
+						border-radius: 6px !important;
+						cursor: pointer !important;
+						display: inline-flex !important;
+						font-family: 'Inter', sans-serif !important;
+						font-size: 14px !important;
+						font-weight: 700 !important;
+						height: 44px !important;
+						justify-content: center !important;
+						max-width: none !important;
+						padding: 0 18px !important;
+						text-transform: none !important;
+					}
+					.contact-form-box #crmWebToEntityForm .formsubmit.zcwf_button{
+						background: var(--gold) !important;
+						border: 1px solid var(--gold) !important;
+						color: var(--royal-blue) !important;
+						min-width: 140px !important;
+					}
+					.contact-form-box #crmWebToEntityForm input[type="reset"].zcwf_button{
+						background: transparent !important;
+						border: 1px solid rgba(26,58,143,0.24) !important;
+						color: var(--royal-blue) !important;
+						margin-left: 8px !important;
+						min-width: 96px !important;
+					}
+					.contact-form-box #crmWebToEntityForm .formsubmit.zcwf_button:hover{
+						background: var(--gold-light) !important;
+						border-color: var(--gold-light) !important;
+					}
+					.contact-form-box #crmWebToEntityForm input[type="reset"].zcwf_button:hover{
+						background: rgba(26,58,143,0.06) !important;
+					}
+					@media (max-width: 640px){
+						.contact-form-box #crmWebToEntityForm .zcwf_button{
+							width: 100% !important;
+						}
+						.contact-form-box #crmWebToEntityForm input[type="reset"].zcwf_button{
+							margin: 10px 0 0 !important;
+						}
+					}
+				</style>
 				<div class = 'zcwf_title' style = 'max-width: 600px;color: black; font-family:Arial;'>Inquiry</div>
 				<div class = 'zcwf_row'>
 					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
@@ -1990,8 +2096,6 @@ document.querySelectorAll('.program-card, .mode-card, .faculty-card, .testimonia
 </script>
 </body>
 </html>
-
-
 
 
 
