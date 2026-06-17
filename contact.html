@@ -1161,6 +1161,9 @@ body {
   border-radius: 16px;
   padding: 28px;
   box-shadow: 0 4px 24px rgba(26,58,143,0.07);
+  justify-self: end;
+  min-width: 320px;
+  width: 50%;
 }
 
 .contact-form-box h3 { font-family: 'Playfair Display', serif; font-size: 21px; color: var(--dark); margin-bottom: 18px; }
@@ -1267,6 +1270,7 @@ footer {
   .events-grid { grid-template-columns: 1fr; }
   .resources-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  .contact-form-box { justify-self: stretch; min-width: 0; width: 100%; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
@@ -2096,8 +2100,6 @@ document.querySelectorAll('.program-card, .mode-card, .faculty-card, .testimonia
 </script>
 </body>
 </html>
-
-
 
 
 
