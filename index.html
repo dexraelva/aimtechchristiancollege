@@ -287,41 +287,6 @@ body {
 }
 .hamburger span { width: 24px; height: 2px; background: var(--royal-blue); display: block; transition: all 0.3s; }
 
-/* ===== ANNOUNCEMENT BANNER ===== */
-.announcement {
-  background: var(--royal-blue);
-  color: var(--white);
-  padding: 12px 0;
-  overflow: hidden;
-}
-
-.announce-ticker {
-  display: flex;
-  gap: 60px;
-  animation: ticker 30s linear infinite;
-  white-space: nowrap;
-}
-
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.announce-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-}
-
-.announce-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--gold);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
 /* ===== HERO ===== */
 .hero {
   background: var(--hero-gradient);
@@ -1589,14 +1554,13 @@ footer {
             <a href="learning-modes.html">Modular Learning</a>
           </div>
         </li>
-        <li><a href="admissions.html">Admissions</a></li>
         <li><a href="faculty.html">Faculty</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-cta">
         <a href="portal.html" class="btn btn-sm nav-portal-btn">Student Portal</a>
-        <a href="admissions.html" class="btn btn-gold btn-sm">Enroll Now</a>
+        <a href="https://admission.aimtechchristiancollege.com" class="btn btn-gold btn-sm">Enroll Now</a>
       </div>
       <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -1604,22 +1568,6 @@ footer {
     </div>
   </div>
 </nav>
-
-<!-- ANNOUNCEMENT BANNER -->
-<div class="announcement">
-  <div class="container" style="overflow:hidden;">
-    <div class="announce-ticker">
-      <span class="announce-item"><span class="announce-dot"></span>🎓 Enrollment Open: S.Y. 2025–2026 — Apply Before July 31!</span>
-      <span class="announce-item"><span class="announce-dot"></span>📅 Orientation Day: August 5, 2025 — All New Students Attend</span>
-      <span class="announce-item"><span class="announce-dot"></span>📖 Online Classes Begin: August 12, 2025 via Moodle LMS</span>
-      <span class="announce-item"><span class="announce-dot"></span>🙏 Chapel Service Every Wednesday — 10:00 AM, Main Campus</span>
-      <span class="announce-item"><span class="announce-dot"></span>🎓 Enrollment Open: S.Y. 2025–2026 — Apply Before July 31!</span>
-      <span class="announce-item"><span class="announce-dot"></span>📅 Orientation Day: August 5, 2025 — All New Students Attend</span>
-      <span class="announce-item"><span class="announce-dot"></span>📖 Online Classes Begin: August 12, 2025 via Moodle LMS</span>
-      <span class="announce-item"><span class="announce-dot"></span>🙏 Chapel Service Every Wednesday — 10:00 AM, Main Campus</span>
-    </div>
-  </div>
-</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -1630,7 +1578,7 @@ footer {
         <h1>Preparing Christian<br>Leaders Through<br><em>Biblical Education</em></h1>
         <p class="hero-mission">AIM Tech Christian College provides transformative theological education grounded in Scripture, empowering students to serve God faithfully through ministry, missions, and Christian service.</p>
         <div class="hero-actions">
-          <a href="admissions.html" class="btn btn-gold">✦ Enroll Now</a>
+          <a href="https://admission.aimtechchristiancollege.com" class="btn btn-gold">✦ Enroll Now</a>
           <a href="programs.html" class="btn btn-outline-white">Explore Programs</a>
         </div>
         <div class="hero-quick-access">
@@ -1715,7 +1663,7 @@ footer {
     <div class="resources-grid">
       <div class="resource-card"><span class="resource-icon">🏛️</span><h4>About</h4><p>Learn about the college, our mission, vision, and statement of faith.</p><a href="about.html" class="btn btn-blue btn-sm">Open About</a></div>
       <div class="resource-card"><span class="resource-icon">📖</span><h4>Programs</h4><p>Review the four offered programs in theology, Christian education, ministry, and doctoral ministry.</p><a href="programs.html" class="btn btn-blue btn-sm">View Programs</a></div>
-      <div class="resource-card"><span class="resource-icon">🎓</span><h4>Admissions</h4><p>See requirements, tuition overview, and the application form.</p><a href="admissions.html" class="btn btn-blue btn-sm">Apply Now</a></div>
+      <div class="resource-card"><span class="resource-icon">🎓</span><h4>Admissions</h4><p>See requirements, tuition overview, and the application form.</p><a href="https://admission.aimtechchristiancollege.com" class="btn btn-blue btn-sm">Apply Now</a></div>
     </div>
   </div>
 </section><!-- FOOTER -->
@@ -1738,7 +1686,6 @@ footer {
         <ul class="footer-links">
           <li><a href="about.html">About ATCC</a></li>
           <li><a href="programs.html">Our Programs</a></li>
-          <li><a href="admissions.html">Admissions</a></li>
           <li><a href="portal.html">Student Portal</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -1797,7 +1744,7 @@ footer {
     <li><a href="contact.html" onclick="toggleMobileMenu()">Contact</a></li>
   </ul>
   <div class="mobile-menu-cta">
-    <a href="admissions.html" class="btn btn-gold" onclick="toggleMobileMenu()" style="justify-content:center;">✦ Enroll Now</a>
+    <a href="https://admission.aimtechchristiancollege.com" class="btn btn-gold" onclick="toggleMobileMenu()" style="justify-content:center;">✦ Enroll Now</a>
     <a href="portal.html" class="btn btn-outline-white" onclick="toggleMobileMenu()" style="justify-content:center;">Student Portal</a>
   </div>
 </div>
@@ -1902,6 +1849,10 @@ document.querySelectorAll('.program-card, .mode-card, .faculty-card, .testimonia
 </script>
 </body>
 </html>
+
+
+
+
 
 
 
