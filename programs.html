@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programs | AIM Tech Christian College</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
 <style>
 /* ===== DESIGN TOKENS ===== */
 :root {
@@ -57,7 +57,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(28px, 4vw, 42px);
   color: var(--dark);
   font-weight: 900;
@@ -541,7 +541,7 @@ section p { color: #111111 !important; }
 
 .programs-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -550,6 +550,8 @@ section p { color: #111111 !important; }
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 28px;
+  display: flex;
+  flex-direction: column;
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
@@ -571,17 +573,27 @@ section p { color: #111111 !important; }
 .program-icon {
   width: 56px;
   height: 56px;
-  background: rgba(26,58,143,0.08);
+  background: var(--royal-blue);
+  color: var(--white);
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
   margin-bottom: 18px;
 }
 
+.program-icon svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .program-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   color: var(--dark);
   margin-bottom: 10px;
@@ -591,14 +603,32 @@ section p { color: #111111 !important; }
 .program-card p {
   font-size: 14px;
   color: var(--muted);
-  margin-bottom: 18px;
-  line-height: 1.6;
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.program-audience {
+  padding: 14px 16px;
+  margin: 4px 0 18px;
+  background: var(--off-white);
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--dark);
+}
+
+.program-audience strong {
+  display: block;
+  color: var(--royal-blue);
+  margin-bottom: 3px;
 }
 
 .program-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: auto;
   margin-bottom: 20px;
 }
 
@@ -613,7 +643,7 @@ section p { color: #111111 !important; }
 }
 
 .meta-tag.online { background: rgba(22,163,74,0.1); color: #16a34a; }
-.meta-tag.onsite { background: rgba(239,68,68,0.1); color: #dc2626; }
+.meta-tag.onsite { background: rgba(22,163,74,0.12); color: #15803d; }
 .meta-tag.modular { background: rgba(234,88,12,0.1); color: #ea580c; }
 
 /* ===== LEARNING MODES ===== */
@@ -1473,7 +1503,12 @@ footer {
   <div class="container">
     <span class="badge">Academic Offerings</span>
     <h2 class="section-title">Programs & <span>Courses</span></h2>
-    <p class="section-sub">Choose from the four Christ-centered courses offered for theological study, Christian education, ministry leadership, and advanced ministry practice.</p>
+    <p class="section-sub">Aimtech Christian College Inc. offers Christ-centered theological and ministry programs that equip students for faithful service in the church, community, mission field, and Christian leadership.</p>
+    <div style="background:var(--off-white);border-left:4px solid var(--gold);border-radius:10px;padding:22px 24px;margin:-20px 0 38px;max-width:900px;">
+      <p style="font-size:14px;line-height:1.7;margin:0 0 10px;"><strong>Students may enroll through either:</strong></p>
+      <p style="font-size:14px;line-height:1.7;margin:0 0 8px;"><strong>Live Class Program</strong> — onsite and online students attend the same scheduled classes simultaneously.</p>
+      <p style="font-size:14px;line-height:1.7;margin:0;"><strong>Modular Program</strong> — a separate flexible learning track using modules and guided academic requirements.</p>
+    </div>
     <div class="programs-tabs">
       <button class="tab-btn active" onclick="filterPrograms('all',this)">All Programs</button>
       <button class="tab-btn" onclick="filterPrograms('theology',this)">Theology</button>
@@ -1483,46 +1518,58 @@ footer {
     </div>
     <div class="programs-grid" id="programsGrid">
       <div class="program-card" data-cat="theology">
-        <div class="program-icon">📖</div>
+        <div class="program-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 5.5A3.5 3.5 0 0 1 6.5 2H11v18H6.5A3.5 3.5 0 0 0 3 23V5.5Z"></path><path d="M21 5.5A3.5 3.5 0 0 0 17.5 2H13v18h4.5A3.5 3.5 0 0 1 21 23V5.5ZM8 7h1M17 6v6M15 9h4"></path></svg>
+        </div>
         <h3>Bachelor of Theology</h3>
-        <p>Comprehensive study of Biblical theology, church history, hermeneutics, and systematic theology.</p>
+        <p>The Bachelor of Theology program prepares students for pastoral ministry, preaching, Bible teaching, church planting, missions, evangelism, and Christian leadership.</p>
+        <p>Students study biblical foundations, doctrine, church history, hermeneutics, homiletics, evangelism, pastoral ministry, and practical theology.</p>
+        <div class="program-audience"><strong>Ideal for:</strong>Pastors, church workers, missionaries, Bible teachers, evangelists, and students preparing for full-time ministry.</div>
         <div class="program-meta">
-          <span class="meta-tag">4 Years</span>
-          <span class="meta-tag online">Online</span>
-          <span class="meta-tag onsite">Onsite</span>
+          <span class="meta-tag onsite">Live Onsite/Online Classes</span>
+          <span class="meta-tag modular">Modular Program</span>
         </div>
         <a href="portal.html" class="btn btn-blue btn-sm" style="width:100%;justify-content:center;">Go to Course Dashboard →</a>
       </div>
       <div class="program-card" data-cat="education">
-        <div class="program-icon">✏️</div>
+        <div class="program-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="m3 10 9-5 9 5-9 5-9-5Z"></path><path d="M7 13v4c3 2 7 2 10 0v-4M21 10v6"></path></svg>
+        </div>
         <h3>Bachelor in Christian Education</h3>
-        <p>Equipping Sunday school teachers, youth workers, and Christian school educators with sound pedagogy.</p>
+        <p>The Bachelor in Christian Education program prepares students for Christian teaching, discipleship ministry, Sunday School leadership, youth ministry, curriculum development, and church-based education.</p>
+        <p>This program is ideal for students called to teach, train, disciple, and develop Christian learning programs in churches, schools, and ministry settings.</p>
+        <div class="program-audience"><strong>Ideal for:</strong>Christian educators, Sunday School teachers, youth leaders, discipleship coordinators, ministry workers, and students called to teaching ministry.</div>
         <div class="program-meta">
-          <span class="meta-tag">4 Years</span>
-          <span class="meta-tag online">Online</span>
-          <span class="meta-tag onsite">Onsite</span>
+          <span class="meta-tag onsite">Live Onsite/Online Classes</span>
+          <span class="meta-tag modular">Modular Program</span>
         </div>
         <a href="portal.html" class="btn btn-blue btn-sm" style="width:100%;justify-content:center;">Go to Course Dashboard →</a>
       </div>
       <div class="program-card" data-cat="ministry">
-        <div class="program-icon">🎤</div>
+        <div class="program-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3v18M7 8h10"></path><path d="M5 21h14"></path></svg>
+        </div>
         <h3>Master in Ministry</h3>
-        <p>Advanced ministry formation for pastors, church workers, and ministry leaders serving in local churches and mission fields.</p>
+        <p>The Master in Ministry program is designed for pastors, missionaries, church workers, and ministry leaders who desire deeper biblical, theological, and practical ministry training.</p>
+        <p>The program strengthens students in pastoral leadership, preaching, discipleship, missions, church administration, and ministry development.</p>
+        <div class="program-audience"><strong>Ideal for:</strong>Pastors, ministry heads, missionaries, church planters, Christian leaders, and graduates of theology or ministry-related programs who want to advance their ministry preparation.</div>
         <div class="program-meta">
-          <span class="meta-tag">2 Years</span>
-          <span class="meta-tag online">Online</span>
-          <span class="meta-tag onsite">Onsite</span>
+          <span class="meta-tag onsite">Live Onsite/Online Classes</span>
+          <span class="meta-tag modular">Modular Program</span>
         </div>
         <a href="portal.html" class="btn btn-blue btn-sm" style="width:100%;justify-content:center;">Go to Course Dashboard →</a>
       </div>
       <div class="program-card" data-cat="doctoral">
-        <div class="program-icon">🏛️</div>
+        <div class="program-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 18h14M6 9v7M10 9v7M14 9v7M18 9v7M3 7l9-5 9 5H3Z"></path></svg>
+        </div>
         <h3>Doctor of Ministry</h3>
-        <p>Doctoral-level ministry practice for experienced leaders seeking deeper theological reflection and strategic ministry impact.</p>
+        <p>The Doctor of Ministry program is an advanced ministry program for experienced pastors, bishops, missionaries, seminary teachers, and Christian leaders seeking higher-level training in ministry leadership and applied theological practice.</p>
+        <p>The program focuses on ministry excellence, leadership development, church growth, discipleship systems, missions, and applied ministry research.</p>
+        <div class="program-audience"><strong>Ideal for:</strong>Senior pastors, bishops, ministry founders, church leaders, seminary instructors, missionaries, and Christian professionals engaged in active ministry leadership.</div>
         <div class="program-meta">
-          <span class="meta-tag">3 Years</span>
-          <span class="meta-tag online">Online</span>
-          <span class="meta-tag modular">Modular</span>
+          <span class="meta-tag onsite">Live Onsite/Online Classes</span>
+          <span class="meta-tag modular">Modular Program</span>
         </div>
         <a href="portal.html" class="btn btn-blue btn-sm" style="width:100%;justify-content:center;">Go to Course Dashboard →</a>
       </div>
