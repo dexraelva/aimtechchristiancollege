@@ -619,7 +619,7 @@ section p { color: #111111 !important; }
 /* ===== LEARNING MODES ===== */
 .modes-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
   margin-bottom: 52px;
 }
@@ -667,38 +667,6 @@ section p { color: #111111 !important; }
   gap: 8px;
 }
 .mode-features li::before { content: "✓"; color: var(--gold); font-weight: 700; }
-
-.comparison-table-wrap { overflow-x: auto; border-radius: 12px; box-shadow: 0 4px 24px rgba(26,58,143,0.08); }
-
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--white);
-  font-size: 14px;
-}
-
-.comparison-table th {
-  background: var(--royal-blue);
-  color: var(--white);
-  padding: 16px 20px;
-  text-align: left;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.comparison-table th:first-child { border-radius: 12px 0 0 0; }
-.comparison-table th:last-child { border-radius: 0 12px 0 0; }
-
-.comparison-table td {
-  padding: 14px 20px;
-  border-bottom: 1px solid var(--border);
-  color: var(--mid);
-}
-
-.comparison-table tr:hover td { background: var(--off-white); }
-
-.check { color: #16a34a; font-size: 18px; }
-.cross { color: #dc2626; font-size: 18px; }
 
 /* ===== ADMISSIONS ===== */
 .admission-steps {
@@ -1438,9 +1406,8 @@ footer {
         <li class="dropdown">
           <a href="learning-modes.html">Learning Modes ▾</a>
           <div class="dropdown-menu">
-            <a href="learning-modes.html">Onsite Learning</a>
-            <a href="learning-modes.html">Online Learning</a>
-            <a href="learning-modes.html">Modular Learning</a>
+            <a href="learning-modes.html">Live Onsite/Online Classes</a>
+            <a href="learning-modes.html">Modular Program</a>
           </div>
         </li>
         <li><a href="faculty.html">Faculty</a></li>
@@ -1472,38 +1439,25 @@ footer {
 <section class="section section-alt" id="modes">
   <div class="container">
     <span class="badge">Delivery Formats</span>
-    <h2 class="section-title">Three Ways to <span>Learn</span></h2>
-    <p class="section-sub">We meet you where you are. Choose the learning format that fits your lifestyle and ministry calling.</p>
+    <h2 class="section-title">Two Ways to <span>Learn</span></h2>
+    <p class="section-sub">Choose between scheduled live classes or a flexible modular learning track.</p>
     <div class="modes-grid">
       <div class="mode-card">
-        <div class="mode-icon-wrap">🏫</div>
-        <h3>Onsite Learning</h3>
-        <p>Traditional classroom-based education at our campus. Experience the full college community life with chapel services, mentoring, and face-to-face instruction.</p>
-        <ul class="mode-features">
-          <li>Mon–Fri structured schedule</li>
-          <li>Direct faculty mentoring</li>
-          <li>Library & campus access</li>
-          <li>Chapel & community life</li>
-          <li>Residential options available</li>
-        </ul>
-        <a href="https://admission.aimtechchristiancollege.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width:100%;justify-content:center;">Apply for Onsite</a>
-      </div>
-      <div class="mode-card">
         <div class="mode-icon-wrap">💻</div>
-        <h3>Online Learning</h3>
-        <p>Fully digital courses delivered through our Moodle LMS. Study at your own pace with live sessions, video lectures, and digital resources accessible 24/7.</p>
+        <h3>Live Onsite/Online Classes</h3>
+        <p>Onsite and online students attend the same scheduled classes simultaneously. Campus-based students participate face-to-face, while online students join the live classroom remotely.</p>
         <ul class="mode-features">
-          <li>Self-paced & guided tracks</li>
-          <li>Live virtual class sessions</li>
-          <li>Moodle LMS platform</li>
-          <li>Mobile-friendly access</li>
-          <li>Email & chat support</li>
+          <li>Shared scheduled live classes</li>
+          <li>Onsite or online attendance</li>
+          <li>Direct faculty mentoring</li>
+          <li>Real-time class participation</li>
+          <li>Access to guided course resources</li>
         </ul>
-        <a href="portal.html" class="btn btn-gold" style="width:100%;justify-content:center;">Access Online Portal</a>
+        <a href="https://admission.aimtechchristiancollege.com" target="_blank" rel="noopener noreferrer" class="btn btn-blue" style="width:100%;justify-content:center;">Apply for Live Classes</a>
       </div>
       <div class="mode-card">
         <div class="mode-icon-wrap">📚</div>
-        <h3>Modular Learning</h3>
+        <h3>Modular Program</h3>
         <p>Printed and digital study modules for those in remote areas or with limited internet access. Study on your own schedule with periodic in-person assessments.</p>
         <ul class="mode-features">
           <li>Printed module packets</li>
@@ -1512,28 +1466,8 @@ footer {
           <li>Phone/email tutoring</li>
           <li>Ideal for remote learners</li>
         </ul>
-        <a href="https://admission.aimtechchristiancollege.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width:100%;justify-content:center;">Apply for Modular</a>
+        <a href="https://admission.aimtechchristiancollege.com" target="_blank" rel="noopener noreferrer" class="btn btn-blue" style="width:100%;justify-content:center;">Apply for Modular</a>
       </div>
-    </div>
-    <div class="comparison-table-wrap">
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>🏫 Onsite</th>
-            <th>💻 Online</th>
-            <th>📚 Modular</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Flexible Schedule</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-          <tr><td>Internet Required</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td></tr>
-          <tr><td>Campus Access</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td>Partial</td></tr>
-          <tr><td>Live Faculty Interaction</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td>Limited</td></tr>
-          <tr><td>Moodle LMS Access</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td>Optional</td></tr>
-          <tr><td>Ideal For</td><td>Full-time students</td><td>Working adults</td><td>Remote learners</td></tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </section>

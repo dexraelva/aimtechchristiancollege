@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faculty | AIM Tech Christian College</title>
+<title>Rev. Bishop Carlito M. Rosal Jr. | AIM Tech Christian College</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
 <style>
 /* ===== DESIGN TOKENS ===== */
@@ -947,19 +947,10 @@ section p { color: #111111 !important; }
   color: rgba(255,255,255,0.6);
 }
 
-.faculty-avatar img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center 22%;
-}
-
 .faculty-info { padding: 20px 16px; }
-.faculty-info h4 { font-weight: 700; font-size: 16px; color: var(--royal-blue); margin-bottom: 4px; }
-.faculty-title { font-size: 12px; color: var(--gold); font-weight: 700; margin-bottom: 8px; letter-spacing: 0.5px; }
-.faculty-spec { font-size: 13px; color: #111111; }
-.faculty-profile-link { margin-top: 16px; }
+.faculty-info h4 { font-weight: 700; font-size: 16px; color: var(--dark); margin-bottom: 4px; }
+.faculty-title { font-size: 12px; color: var(--gold); font-weight: 600; margin-bottom: 8px; letter-spacing: 0.5px; }
+.faculty-spec { font-size: 13px; color: var(--muted); }
 
 /* ===== TESTIMONIALS ===== */
 .testimonials-grid {
@@ -1249,6 +1240,7 @@ footer {
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  .profile-summary-grid { grid-template-columns: 1fr !important; }
   .page-tools-inner { align-items: flex-start; flex-direction: column; }
   .page-tools-actions { width: 100%; }
   .page-tool-btn { flex: 1; }
@@ -1477,85 +1469,48 @@ footer {
   </div>
 </div>
 
-<!-- FACULTY -->
-<section class="section" id="faculty">
+<!-- PRESIDENT PROFILE -->
+<section class="section" id="president-profile">
   <div class="container">
-    <span class="badge">Our Educators</span>
-    <h2 class="section-title">Faculty & <span>Lecturers</span></h2>
-    <p class="section-sub">Learn from ordained ministers, seasoned pastors, and credentialed theologians committed to your spiritual and academic growth.</p>
-    <div class="faculty-grid">
-      <div class="faculty-card">
-        <div class="faculty-avatar">
-          <img src="assets/staff/charlie.png" alt="Rev. Bishop Carlito M. Rosal Jr.">
-        </div>
-        <div class="faculty-info">
-          <h4>Rev. Bishop Carlito M. Rosal Jr.</h4>
-          <div class="faculty-title">School President & CEO</div>
-          <div class="faculty-spec">Ordained Bishop · President · Chairman<br>AIM TECH Christian College</div>
-          <a href="bishop-carlito-rosal.html" class="btn btn-blue btn-sm faculty-profile-link">View Full Profile</a>
-        </div>
+    <div style="max-width:950px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:42px;">
+        <span class="badge">Leadership Profile</span>
+        <h1 class="section-title" style="text-align:center;">Rev. Bishop <span>Carlito M. Rosal Jr.</span></h1>
+        <p class="section-sub" style="max-width:680px;margin:0 auto;">School President and Chief Executive Officer of AIM TECH Christian College</p>
       </div>
-      <div class="faculty-card">
-        <div class="faculty-avatar">
-          <img src="assets/staff/dex.png" alt="Pastor Dex R. Rael">
-        </div>
-        <div class="faculty-info">
-          <h4>Pastor Dex R. Rael</h4>
-          <div class="faculty-title">Web Developer & Technical Staff</div>
-          <div class="faculty-spec">Bachelor of Arts in Christian Education · Master of Arts in Ministry<br>Pastor, KJV Bible Christian Church — Leyte</div>
-        </div>
-      </div>
-      <div class="faculty-card">
-        <div class="faculty-avatar">👨‍🏫</div>
-        <div class="faculty-info">
-          <h4>Ptr. Benjamin Cruz</h4>
-          <div class="faculty-title">Missions & Evangelism Chair</div>
-          <div class="faculty-spec">Th.M, Far Eastern Bible College</div>
-        </div>
-      </div>
-      <div class="faculty-card">
-        <div class="faculty-avatar">👩‍🏫</div>
-        <div class="faculty-info">
-          <h4>Dr. Grace Villanueva</h4>
-          <div class="faculty-title">Christian Education Director</div>
-          <div class="faculty-spec">Ph.D, Philippine Christian University</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      <article style="background:var(--white);border:1px solid var(--border);border-top:4px solid var(--gold);border-radius:16px;padding:clamp(28px,5vw,56px);box-shadow:0 12px 36px rgba(20,42,90,0.08);">
+        <div style="font-size:16px;color:var(--mid);line-height:1.85;">
+          <div class="profile-summary-grid" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:38px;">
+            <div style="background:var(--off-white);border-radius:10px;padding:18px;border-left:3px solid var(--gold);"><strong style="color:var(--royal-blue);">Main Position</strong><br>Ordained Bishop / President / Chairman</div>
+            <div style="background:var(--off-white);border-radius:10px;padding:18px;border-left:3px solid var(--gold);"><strong style="color:var(--royal-blue);">Current Work Title</strong><br>School President / CEO</div>
+            <div style="background:var(--off-white);border-radius:10px;padding:18px;border-left:3px solid var(--gold);"><strong style="color:var(--royal-blue);">Institution</strong><br>AIM TECH Christian College</div>
+            <div style="background:var(--off-white);border-radius:10px;padding:18px;border-left:3px solid var(--gold);"><strong style="color:var(--royal-blue);">Work Period</strong><br>January 12, 2011 – Present</div>
+            <div style="background:var(--off-white);border-radius:10px;padding:18px;border-left:3px solid var(--gold);"><strong style="color:var(--royal-blue);">Church / Ministry</strong><br>Church Planting &amp; Discipleship Ministry for Jesus</div>
+            <div style="background:var(--off-white);border-radius:10px;padding:18px;border-left:3px solid var(--gold);"><strong style="color:var(--royal-blue);">Office / Church Address</strong><br>31 Quirino Highway, Amparo Subdivision, Caloocan City, Philippines</div>
+          </div>
 
-<!-- TESTIMONIALS -->
-<section class="section section-alt" id="testimonials">
-  <div class="container">
-    <span class="badge">Student Stories</span>
-    <h2 class="section-title">What Our <span>Graduates Say</span></h2>
-    <p class="section-sub">Real stories from pastors, missionaries, and ministry leaders shaped by their time at AIM Tech Christian College.</p>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <span class="testimonial-quote">"</span>
-        <p>AIM Tech didn't just give me a degree — it gave me a calling. The faculty poured into my life, and I left equipped to pastor with confidence in God's Word.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">JM</div>
-          <div><div class="author-name">Pastor Joel Mendoza</div><div class="author-role">B.Th Graduate · Church Planter, Mindanao</div></div>
+          <h2 style="font-family:'Montserrat',sans-serif;font-size:26px;color:var(--dark);margin:0 0 18px;">Degrees / Education Earned</h2>
+          <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:var(--royal-blue);color:var(--white);">
+                  <th style="padding:14px;text-align:left;">Year / Date</th>
+                  <th style="padding:14px;text-align:left;">Degree / Qualification</th>
+                  <th style="padding:14px;text-align:left;">School / Institution</th>
+                  <th style="padding:14px;text-align:left;">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="padding:14px;border-bottom:1px solid var(--border);">May 1, 2018</td><td style="padding:14px;border-bottom:1px solid var(--border);">Doctor of Values Education</td><td style="padding:14px;border-bottom:1px solid var(--border);">Far East Advent School of Theology International</td><td style="padding:14px;border-bottom:1px solid var(--border);">—</td></tr>
+                <tr><td style="padding:14px;border-bottom:1px solid var(--border);">2017</td><td style="padding:14px;border-bottom:1px solid var(--border);">Bachelor of Science in Business Administration</td><td style="padding:14px;border-bottom:1px solid var(--border);">Oxfordian Colleges</td><td style="padding:14px;border-bottom:1px solid var(--border);">MBC Bldg., Paliparan, Cavite, Philippines</td></tr>
+                <tr><td style="padding:14px;border-bottom:1px solid var(--border);">2016</td><td style="padding:14px;border-bottom:1px solid var(--border);">Certificate in Teaching Program / Units in Education</td><td style="padding:14px;border-bottom:1px solid var(--border);">Oxfordian Colleges</td><td style="padding:14px;border-bottom:1px solid var(--border);">MBC Bldg., Paliparan, Cavite, Philippines</td></tr>
+                <tr><td style="padding:14px;border-bottom:1px solid var(--border);">2013 – March 30, 2016</td><td style="padding:14px;border-bottom:1px solid var(--border);">Master of Arts in Christian Education</td><td style="padding:14px;border-bottom:1px solid var(--border);">Far East Advent School of Theology International</td><td style="padding:14px;border-bottom:1px solid var(--border);">172 J.P. Laurel St., Bacoor City, Cavite, Philippines</td></tr>
+                <tr><td style="padding:14px;">2012 – 2013 / 1992 – 1996</td><td style="padding:14px;">Bachelor of Science in Criminology</td><td style="padding:14px;">Philippine College of Criminology</td><td style="padding:14px;">650 Sales St., Sta. Cruz, Manila</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-      <div class="testimonial-card">
-        <span class="testimonial-quote">"</span>
-        <p>As a working mother, the online and modular options were a blessing. I completed my Christian education studies while raising two kids and serving in church every weekend.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">AL</div>
-          <div><div class="author-name">Sis. Ana Loresca</div><div class="author-role">Bachelor in Christian Education Graduate · Women's Ministry Leader</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <span class="testimonial-quote">"</span>
-        <p>The quality of teaching here rivals any seminary I've visited. The Statement of Faith and the commitment to Scripture make it a safe place for genuine spiritual formation.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">RP</div>
-          <div><div class="author-name">Rev. Roberto Panganiban</div><div class="author-role">Senior Pastor · Manila Central Church</div></div>
-        </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
@@ -1612,7 +1567,7 @@ footer {
       <span>
         <a href="index.html">Privacy Policy</a> &nbsp;·&nbsp;
         <a href="index.html">Terms of Use</a> &nbsp;·&nbsp;
-        <a href="index.html">Statement of Faith</a>
+        <a href="statement-of-faith.html">Statement of Faith</a>
       </span>
     </div>
   </div>
@@ -1718,7 +1673,6 @@ document.querySelectorAll('.program-card, .mode-card, .faculty-card, .testimonia
 </script>
 </body>
 </html>
-
 
 
 
