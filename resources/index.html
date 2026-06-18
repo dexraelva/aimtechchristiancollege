@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIM Tech Christian College</title>
+<base href="../">
+<title>Resources | AIM Tech Christian College</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
 <style>
 /* ===== DESIGN TOKENS ===== */
@@ -29,7 +30,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   animation: pageFadeIn 0.28s ease both;
-  padding-top: 87px;
+  padding-top: 91px;
   font-family: 'Inter', sans-serif;
   color: var(--dark);
   background: var(--white);
@@ -167,7 +168,6 @@ section p { color: #111111 !important; }
 .btn-blue:hover { background: var(--sky-blue); transform: translateY(-2px); }
 
 .btn-sm { padding: 10px 22px; font-size: 13px; }
-
 .nav-cta .btn-sm {
   padding: 9px 16px;
   min-height: 38px;
@@ -202,8 +202,7 @@ section p { color: #111111 !important; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 12px 0;
+  padding: 14px 0;
 }
 
 .nav-logo {
@@ -211,18 +210,11 @@ section p { color: #111111 !important; }
   align-items: center;
   gap: 14px;
   text-decoration: none;
-  flex-shrink: 0;
-  min-width: 270px;
 }
 
 .nav-logo img { width: 60px; height: 60px; object-fit: contain; }
 
-.nav-brand {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.15;
-}
+.nav-brand { line-height: 1.25; }
 .nav-brand-main {
   display: block;
   font-family: 'Cinzel', serif;
@@ -238,7 +230,6 @@ section p { color: #111111 !important; }
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-top: 4px;
 }
 
 .nav-links {
@@ -246,8 +237,6 @@ section p { color: #111111 !important; }
   list-style: none;
   gap: 4px;
   align-items: center;
-  justify-content: center;
-  margin-left: auto;
 }
 
 .nav-links a {
@@ -285,7 +274,7 @@ section p { color: #111111 !important; }
   font-size: 14px;
 }
 
-.nav-cta { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
+.nav-cta { display: flex; gap: 10px; align-items: center; }
 
 .hamburger {
   display: none;
@@ -357,7 +346,7 @@ section p { color: #111111 !important; }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 4.6vw, 54px);
+  font-size: clamp(36px, 5.5vw, 64px);
   font-weight: 900;
   line-height: 1.08;
   margin-bottom: 20px;
@@ -367,7 +356,6 @@ section p { color: #111111 !important; }
 .hero h1 em {
   font-style: normal;
   color: var(--gold-light);
-  white-space: nowrap;
 }
 
 .hero-mission {
@@ -380,37 +368,82 @@ section p { color: #111111 !important; }
 
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 52px; }
 
-.hero-logo-float {
-  position: relative;
-  width: min(42vw, 460px);
-  min-width: 340px;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+.hero-quick-access {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 400px;
 }
 
-.hero-logo-float::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(145deg, rgba(13,27,62,0.2) 0%, rgba(26,58,143,0.32) 52%, rgba(201,162,39,0.42) 100%),
-    linear-gradient(0deg, rgba(13,27,62,0.82) 0%, rgba(13,27,62,0.08) 52%);
-  z-index: 1;
-  pointer-events: none;
+.quick-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--white);
+  padding: 14px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s;
+  font-size: 13px;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+.quick-btn:hover { background: rgba(255,255,255,0.16); border-color: var(--gold); transform: translateY(-2px); }
+
+.quick-btn-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gold-gradient);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  color: var(--dark);
+}
+
+.hero-logo-float {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .hero-logo-float img {
-  width: 100%;
-  height: 520px;
-  display: block;
-  object-fit: cover;
-  transform: scale(1.02);
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 32px rgba(201,162,39,0.4));
+  animation: floatLogo 4s ease-in-out infinite;
 }
 
 @keyframes floatLogo {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.stat-item { text-align: center; }
+.stat-num {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--gold-light);
+}
+.stat-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.5px;
 }
 
 /* ===== ABOUT ===== */
@@ -1073,25 +1106,9 @@ section p { color: #111111 !important; }
 .resource-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(26,58,143,0.1); border-color: var(--sky-blue); }
 
 .resource-icon {
-  width: 54px;
-  height: 54px;
-  margin: 0 auto 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  background: var(--royal-blue);
-  border-radius: 14px;
-}
-
-.resource-icon svg {
-  width: 26px;
-  height: 26px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  font-size: 44px;
+  margin-bottom: 16px;
+  display: block;
 }
 
 .resource-card h4 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--dark); margin-bottom: 10px; }
@@ -1235,6 +1252,9 @@ footer {
   .nav-brand { min-width: 0; }
   .nav-brand-main { font-size: 14px; line-height: 1.15; }
   .nav-brand-main { white-space: normal; overflow-wrap: break-word; }
+  .hero-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stat-num { font-size: 24px; }
+  .stat-label { font-size: 10px; }
   .nav-brand-sub { font-size: 10px; letter-spacing: 1.2px; }
   .hero h1 em { white-space: normal; }
   .accred-inner { align-items: flex-start; gap: 14px; }
@@ -1243,8 +1263,8 @@ footer {
   .accred-badge { width: 100%; justify-content: flex-start; }
   .hero { padding: 64px 0 52px; }
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-logo-float { width: 100%; min-width: 0; }
-  .hero-logo-float img { height: 320px; }
+  .hero-logo-float { display: none; }
+  .hero-quick-access { grid-template-columns: 1fr 1fr; max-width: 100%; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .programs-grid { grid-template-columns: 1fr; }
   .modes-grid { grid-template-columns: 1fr; }
@@ -1259,18 +1279,21 @@ footer {
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .nav-links, .nav-cta { display: none; }
-  .nav-logo { min-width: 0; }
   .hamburger { display: flex; }
   .about-values { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .portal-specs { grid-template-columns: 1fr; }
+  .hero-stats { gap: 20px; }
 }
 
 
 @media (max-width: 420px) {
   .container { padding: 0 14px; }
   .hero h1 { font-size: 30px; }
+  .hero-quick-access { grid-template-columns: 1fr; }
   .hero-logo-float img { height: 280px; }
+  .hero-stats { left: 10px; right: 10px; bottom: 10px; padding: 10px; gap: 8px; }
+  .quick-btn { min-width: 0; }
   .page-tools-actions { gap: 6px; }
   .page-tool-btn { min-width: 0; padding: 8px 10px; }
 }
@@ -1372,7 +1395,7 @@ footer {
   white-space: nowrap;
 }
 
-.accred-badges { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.accred-badges { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
 
 .accred-badge {
   display: flex;
@@ -1385,90 +1408,9 @@ footer {
   font-size: 13px;
   font-weight: 600;
   color: var(--mid);
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  text-align: left;
-  transition: all 0.2s;
-}
-.accred-badge:hover {
-  border-color: var(--gold);
-  color: var(--royal-blue);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(26,58,143,0.1);
 }
 
 .accred-badge-icon { font-size: 20px; }
-
-.cert-modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(13,27,62,0.72);
-  z-index: 10000;
-}
-.cert-modal.open { display: flex; }
-.cert-modal-panel {
-  width: min(680px, 100%);
-  max-height: min(760px, 90vh);
-  overflow-y: auto;
-  background: var(--white);
-  border-radius: 12px;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
-}
-.cert-modal-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 24px 28px;
-  background: var(--blue-gradient);
-  color: var(--white);
-}
-.cert-modal-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  line-height: 1.2;
-  color: var(--white);
-}
-.cert-modal-close {
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  color: var(--white);
-  font-size: 22px;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-.cert-modal-body { padding: 28px; }
-.cert-sample {
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--off-white);
-  padding: 14px;
-  margin-bottom: 20px;
-}
-.cert-sample img {
-  width: 100%;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(13,27,62,0.12);
-}
-.cert-summary {
-  display: block;
-  color: var(--dark);
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.cert-note {
-  color: var(--mid);
-  font-size: 14px;
-  line-height: 1.7;
-}
 </style>
 </head>
 <body>
@@ -1515,73 +1457,66 @@ footer {
     </div>
   </div>
 </nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-cross">✝</div>
+<!-- PAGE NAVIGATION TOOLS -->
+<div class="page-tools">
   <div class="container">
-    <div class="hero-inner">
-      <div class="hero-content">
-        <h1>Preparing Christian<br>Leaders Through<br><em>Biblical Education</em></h1>
-        <p class="hero-mission">AIM Tech Christian College provides transformative theological education grounded in Scripture, empowering students to serve God faithfully through ministry, missions, and Christian service.</p>
-        <div class="hero-actions">
-          <a href="https://admission.aimtechchristiancollege.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold">✦ Enroll Now</a>
-          <a href="programs/" class="btn btn-outline-white">Explore Programs</a>
-        </div>
+    <div class="page-tools-inner">
+      <div class="page-tools-actions">
+        <button class="page-tool-btn" type="button" onclick="goBackOrHome()">← Back</button>
+        <a class="page-tool-btn" href="./">⌂ Home</a>
       </div>
-      <div class="hero-logo-float">
-        <img src="assets/images/headerphoto.png" alt="AIM Tech Christian College students and campus life">
+    </div>
+  </div>
+</div>
+
+<!-- RESOURCES -->
+<section class="section" id="resources">
+  <div class="container">
+    <span class="badge">Digital Library</span>
+    <h2 class="section-title">Resources & <span>Library</span></h2>
+    <p class="section-sub">Access sermons, Bible study guides, lecture recordings, and theological resources to deepen your walk with God.</p>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <span class="resource-icon">🎙️</span>
+        <h4>Sermon Library</h4>
+        <p>Hundreds of recorded sermons and teachings from faculty, visiting ministers, and chapel services.</p>
+        <a href="./" class="btn btn-blue btn-sm">Browse Sermons</a>
+      </div>
+      <div class="resource-card">
+        <span class="resource-icon">📄</span>
+        <h4>Downloadable PDFs</h4>
+        <p>Bible study guides, doctrinal statements, ministry handbooks, and study helps — free to download.</p>
+        <a href="./" class="btn btn-blue btn-sm">Download Resources</a>
+      </div>
+      <div class="resource-card">
+        <span class="resource-icon">🎬</span>
+        <h4>Recorded Lectures</h4>
+        <p>Catch up on missed classes or preview course content with our growing archive of video lectures.</p>
+        <a href="portal/" class="btn btn-blue btn-sm">Access via Portal</a>
+      </div>
+      <div class="resource-card">
+        <span class="resource-icon">📚</span>
+        <h4>Recommended Reading</h4>
+        <p>Curated lists of essential theological books, commentaries, and ministry resources by our faculty.</p>
+        <a href="./" class="btn btn-blue btn-sm">View Reading List</a>
+      </div>
+      <div class="resource-card">
+        <span class="resource-icon">🎵</span>
+        <h4>Worship Resources</h4>
+        <p>Chord charts, worship guides, and devotional materials for church worship leaders and musicians.</p>
+        <a href="./" class="btn btn-blue btn-sm">Explore Worship</a>
+      </div>
+      <div class="resource-card">
+        <span class="resource-icon">🌐</span>
+        <h4>Missions Resources</h4>
+        <p>Cross-cultural ministry tools, prayer guides for unreached peoples, and church planting resources.</p>
+        <a href="./" class="btn btn-blue btn-sm">View Resources</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ACCREDITATION BAR -->
-<div class="accred-bar">
-  <div class="container">
-    <div class="accred-inner">
-      <span class="accred-label">Accreditations & Affiliations</span>
-      <div class="accred-badges">
-        <button class="accred-badge" onclick="openCertModal('Philippine Association of Bible and Theological Schools', 'Sample certification preview for PABATS.', 'Official certification details may be displayed here.')"><span class="accred-badge-icon">📜</span> Philippine Association of Bible and Theological Schools</button>
-        <button class="accred-badge" onclick="openCertModal('Philippine Council of Evangelical Churches', 'Sample certification preview for PCEC.', 'Official certification details may be displayed here.')"><span class="accred-badge-icon">✝️</span> Philippine Council of Evangelical Churches</button>
-        <button class="accred-badge" onclick="openCertModal('International Theological Accreditation Association (ITAA)', 'Sample certification preview for ITAA.', 'Official certification details may be displayed here.')"><span class="accred-badge-icon">🌐</span> International Theological Accreditation Association (ITAA)</button>
-        <button class="accred-badge" onclick="openCertModal('Philippines National Police Chaplain Service', 'Sample certification preview for the Philippines National Police Chaplain Service.', 'Official certification details may be displayed here.')"><span class="accred-badge-icon">🛡️</span> Philippines National Police Chaplain Service</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CERTIFICATION MODAL -->
-<div class="cert-modal" id="certModal" aria-hidden="true" onclick="closeCertModal(event)">
-  <div class="cert-modal-panel" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
-    <div class="cert-modal-head">
-      <h3 class="cert-modal-title" id="certModalTitle">Certification</h3>
-      <button class="cert-modal-close" onclick="closeCertModal()" aria-label="Close certification modal">×</button>
-    </div>
-    <div class="cert-modal-body">
-      <div class="cert-sample">
-        <img src="assets/certifications/sample-certification.svg" alt="Sample certification preview">
-      </div>
-      <strong class="cert-summary" id="certModalSummary">Sample certification preview</strong>
-      <p class="cert-note" id="certModalNote">Certification details will appear here.</p>
-    </div>
-  </div>
-</div>
-
-
-<!-- SITE DIRECTORY -->
-<section class="section">
-  <div class="container">
-    <span class="badge">Explore AIM Tech</span>
-    <h2 class="section-title">Find the Page You <span>Need</span></h2>
-    <p class="section-sub">Each major section now has its own page for easier browsing and sharing.</p>
-    <div class="resources-grid">
-      <div class="resource-card"><span class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 18h14M6 9v7M10 9v7M14 9v7M18 9v7M3 7l9-5 9 5H3Z"></path></svg></span><h4>About</h4><p>Learn about the college, our mission, vision, and statement of faith.</p><a href="about/" class="btn btn-blue btn-sm">Open About</a></div>
-      <div class="resource-card"><span class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5.5A3.5 3.5 0 0 1 6.5 2H11v18H6.5A3.5 3.5 0 0 0 3 23V5.5Z"></path><path d="M21 5.5A3.5 3.5 0 0 0 17.5 2H13v18h4.5A3.5 3.5 0 0 1 21 23V5.5Z"></path></svg></span><h4>Programs</h4><p>Review the four offered programs in theology, Christian education, ministry, and doctoral ministry.</p><a href="programs/" class="btn btn-blue btn-sm">View Programs</a></div>
-      <div class="resource-card"><span class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-5 9 5-9 5-9-5Z"></path><path d="M7 13v4c3 2 7 2 10 0v-4M21 10v6"></path></svg></span><h4>Admissions</h4><p>See admission requirements and open the application portal.</p><a href="https://admission.aimtechchristiancollege.com" target="_blank" rel="noopener noreferrer" class="btn btn-blue btn-sm">Apply Now</a></div>
-    </div>
-  </div>
-</section><!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1720,28 +1655,6 @@ function launchMoodle() {
   window.open('https://moodle.aimtechchristiancollege.com', '_blank');
 }
 
-function openCertModal(title, summary, note) {
-  const modal = document.getElementById('certModal');
-  document.getElementById('certModalTitle').textContent = title;
-  document.getElementById('certModalSummary').textContent = summary;
-  document.getElementById('certModalNote').textContent = note;
-  modal.classList.add('open');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeCertModal(event) {
-  if (event && event.target !== document.getElementById('certModal')) return;
-  const modal = document.getElementById('certModal');
-  modal.classList.remove('open');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-}
-
-window.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeCertModal();
-});
-
 // Animate on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -1761,7 +1674,6 @@ document.querySelectorAll('.program-card, .mode-card, .faculty-card, .testimonia
 </script>
 </body>
 </html>
-
 
 
 
