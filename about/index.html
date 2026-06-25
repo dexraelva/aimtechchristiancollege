@@ -176,19 +176,20 @@ section p { color: #111111 !important; }
 }
 
 .nav-portal-btn {
-  background: var(--royal-blue);
-  color: var(--white);
-  border: 1px solid var(--royal-blue);
-  box-shadow: 0 4px 14px rgba(26,58,143,0.22);
+  background: var(--white);
+  color: var(--royal-blue);
+  border: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 4px 14px rgba(10,31,68,0.18);
 }
 .nav-portal-btn:hover {
-  background: var(--sky-blue);
-  border-color: var(--sky-blue);
+  background: var(--off-white);
+  color: var(--royal-blue);
+  border-color: var(--white);
 }
 
 /* ===== NAVBAR ===== */
 .navbar {
-  background: var(--white);
+  background: var(--royal-blue);
   border-bottom: 3px solid var(--gold);
   position: fixed;
   top: 0;
@@ -220,14 +221,14 @@ section p { color: #111111 !important; }
   display: block;
   font-family: 'Cinzel', serif;
   font-size: 16px;
-  color: var(--royal-blue);
+  color: var(--white);
   font-weight: 700;
   letter-spacing: 1px;
 }
 .nav-brand-sub {
   display: block;
   font-size: 11px;
-  color: var(--gold);
+  color: var(--gold-light);
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -242,7 +243,7 @@ section p { color: #111111 !important; }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--mid);
+  color: rgba(255,255,255,0.86);
   font-weight: 500;
   font-size: 14px;
   padding: 8px 14px;
@@ -285,6 +286,11 @@ section p { color: #111111 !important; }
   padding: 10px 20px;
   border-radius: 0;
   font-size: 14px;
+  color: var(--mid);
+}
+.nav-links .dropdown-menu a:hover {
+  color: var(--royal-blue);
+  background: rgba(26,58,143,0.06);
 }
 
 .nav-cta { display: flex; gap: 10px; align-items: center; }
@@ -296,7 +302,7 @@ section p { color: #111111 !important; }
   gap: 5px;
   padding: 4px;
 }
-.hamburger span { width: 24px; height: 2px; background: var(--royal-blue); display: block; transition: all 0.3s; }
+.hamburger span { width: 24px; height: 2px; background: var(--white); display: block; transition: all 0.3s; }
 
 /* ===== HERO ===== */
 .hero {

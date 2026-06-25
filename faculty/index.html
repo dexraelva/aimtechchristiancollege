@@ -176,19 +176,20 @@ section p { color: #111111 !important; }
 }
 
 .nav-portal-btn {
-  background: var(--royal-blue);
-  color: var(--white);
-  border: 1px solid var(--royal-blue);
-  box-shadow: 0 4px 14px rgba(26,58,143,0.22);
+  background: var(--white);
+  color: var(--royal-blue);
+  border: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 4px 14px rgba(10,31,68,0.18);
 }
 .nav-portal-btn:hover {
-  background: var(--sky-blue);
-  border-color: var(--sky-blue);
+  background: var(--off-white);
+  color: var(--royal-blue);
+  border-color: var(--white);
 }
 
 /* ===== NAVBAR ===== */
 .navbar {
-  background: var(--white);
+  background: var(--royal-blue);
   border-bottom: 3px solid var(--gold);
   position: fixed;
   top: 0;
@@ -220,14 +221,14 @@ section p { color: #111111 !important; }
   display: block;
   font-family: 'Cinzel', serif;
   font-size: 16px;
-  color: var(--royal-blue);
+  color: var(--white);
   font-weight: 700;
   letter-spacing: 1px;
 }
 .nav-brand-sub {
   display: block;
   font-size: 11px;
-  color: var(--gold);
+  color: var(--gold-light);
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -242,7 +243,7 @@ section p { color: #111111 !important; }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--mid);
+  color: rgba(255,255,255,0.86);
   font-weight: 500;
   font-size: 14px;
   padding: 8px 14px;
@@ -250,7 +251,7 @@ section p { color: #111111 !important; }
   transition: all 0.2s;
   position: relative;
 }
-.nav-links a:hover { color: var(--royal-blue); background: rgba(26,58,143,0.06); }
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.12); }
 
 .nav-links .dropdown { position: relative; }
 .nav-links .dropdown-menu {
@@ -274,6 +275,11 @@ section p { color: #111111 !important; }
   padding: 10px 20px;
   border-radius: 0;
   font-size: 14px;
+  color: var(--mid);
+}
+.nav-links .dropdown-menu a:hover {
+  color: var(--royal-blue);
+  background: rgba(26,58,143,0.06);
 }
 
 .nav-cta { display: flex; gap: 10px; align-items: center; }
@@ -285,7 +291,7 @@ section p { color: #111111 !important; }
   gap: 5px;
   padding: 4px;
 }
-.hamburger span { width: 24px; height: 2px; background: var(--royal-blue); display: block; transition: all 0.3s; }
+.hamburger span { width: 24px; height: 2px; background: var(--white); display: block; transition: all 0.3s; }
 
 /* ===== HERO ===== */
 .hero {
@@ -930,6 +936,56 @@ section p { color: #111111 !important; }
   gap: 24px;
 }
 
+.faculty-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+.faculty-featured-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s;
+  box-shadow: 0 8px 28px rgba(26,58,143,0.08);
+}
+.faculty-featured-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(26,58,143,0.14); }
+
+.faculty-featured-avatar {
+  min-height: 230px;
+  background: var(--blue-gradient);
+  color: rgba(255,255,255,0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.faculty-featured-avatar img {
+  width: 100%;
+  height: 100%;
+  min-height: 230px;
+  display: block;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.memorial-cross {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--gold);
+  margin-left: 8px;
+}
+
+.faculty-featured-info { padding: 26px 24px 28px; }
+.faculty-featured-info h4 { font-weight: 800; font-size: 20px; color: var(--royal-blue); margin-bottom: 8px; }
+.faculty-featured-info .faculty-title { font-size: 13px; }
+
 .faculty-card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -1283,6 +1339,7 @@ footer {
   .admission-steps::before { display: none; }
   .admission-form-wrap { grid-template-columns: 1fr; }
   .portal-grid { grid-template-columns: 1fr; }
+  .faculty-featured-grid { grid-template-columns: 1fr; }
   .faculty-grid { grid-template-columns: 1fr 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .events-grid { grid-template-columns: 1fr; }
@@ -1474,6 +1531,28 @@ footer {
     <span class="badge">Our Educators</span>
     <h2 class="section-title">Faculty & <span>Lecturers</span></h2>
     <p class="section-sub">Learn from ordained ministers, seasoned pastors, and credentialed theologians committed to your spiritual and academic growth.</p>
+    <div class="faculty-featured-grid">
+      <div class="faculty-featured-card">
+        <div class="faculty-featured-avatar">
+          <img src="../assets/images/henry.svg" alt="Rev. Bishop Dr, Engr. Henry I. Libetario">
+        </div>
+        <div class="faculty-featured-info">
+          <h4>Rev. Bishop Dr, Engr. Henry I. Libetario <span class="memorial-cross" aria-hidden="true">†</span></h4>
+          <div class="faculty-title">In Memoriam</div>
+          <div class="faculty-spec">Faithful servant and ministry leader</div>
+        </div>
+      </div>
+      <div class="faculty-featured-card">
+        <div class="faculty-featured-avatar">
+          <img src="../assets/images/ellie.svg" alt="Rev. Bishop Ellie Formilleza">
+        </div>
+        <div class="faculty-featured-info">
+          <h4>Rev. Bishop Ellie Formilleza <span class="memorial-cross" aria-hidden="true">†</span></h4>
+          <div class="faculty-title">In Memoriam</div>
+          <div class="faculty-spec">Faithful servant and ministry leader</div>
+        </div>
+      </div>
+    </div>
     <div class="faculty-grid">
       <div class="faculty-card">
         <div class="faculty-avatar">
@@ -1764,7 +1843,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.program-card, .mode-card, .faculty-card, .testimonial-card, .event-item, .resource-card').forEach(el => {
+document.querySelectorAll('.program-card, .mode-card, .faculty-featured-card, .faculty-card, .testimonial-card, .event-item, .resource-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -1773,12 +1852,6 @@ document.querySelectorAll('.program-card, .mode-card, .faculty-card, .testimonia
 </script>
 </body>
 </html>
-
-
-
-
-
-
 
 
 
