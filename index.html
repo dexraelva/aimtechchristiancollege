@@ -1549,6 +1549,72 @@ footer {
     height: 44px;
   }
 }
+
+.cookie-consent {
+  position: fixed;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10040;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 12px;
+  background: rgba(13,27,62,0.96);
+  color: var(--white);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.28);
+}
+.cookie-consent.show { display: flex; }
+.cookie-consent-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.86);
+}
+.cookie-consent-text strong {
+  display: block;
+  color: var(--white);
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+.cookie-consent-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.cookie-btn {
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: transparent;
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+}
+.cookie-btn-primary {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--navy);
+}
+
+@media (max-width: 640px) {
+  .cookie-consent {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cookie-consent-actions {
+    flex-direction: column;
+  }
+}
 </style>
 </head>
 <body>
@@ -1754,6 +1820,18 @@ footer {
 <!-- SCROLL TO TOP -->
 <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">▲</button>
 
+<!-- COOKIE CONSENT -->
+<div class="cookie-consent" id="cookieConsent" aria-hidden="true">
+  <div class="cookie-consent-text">
+    <strong>Cookie Notice</strong>
+    We use essential cookies to remember your preferences and improve your browsing experience.
+  </div>
+  <div class="cookie-consent-actions">
+    <button class="cookie-btn" type="button" onclick="setCookieConsent('necessary')">Necessary Only</button>
+    <button class="cookie-btn cookie-btn-primary" type="button" onclick="setCookieConsent('accepted')">Accept Cookies</button>
+  </div>
+</div>
+
 <script>
 // Mobile menu
 function toggleMobileMenu() {
@@ -1771,6 +1849,34 @@ window.addEventListener('scroll', () => {
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function getCookie(name) {
+  return document.cookie
+    .split('; ')
+    .find(row => row.startsWith(`${name}=`))
+    ?.split('=')[1];
+}
+
+function setCookie(name, value, days) {
+  const maxAge = days * 24 * 60 * 60;
+  const secure = window.location.protocol === 'https:' ? '; Secure' : '';
+  document.cookie = `${name}=${encodeURIComponent(value)}; path=/; max-age=${maxAge}; SameSite=Lax${secure}`;
+}
+
+function showCookieConsent() {
+  const banner = document.getElementById('cookieConsent');
+  if (!banner || getCookie('atccCookieConsent')) return;
+  banner.classList.add('show');
+  banner.setAttribute('aria-hidden', 'false');
+}
+
+function setCookieConsent(choice) {
+  const banner = document.getElementById('cookieConsent');
+  setCookie('atccCookieConsent', choice, 180);
+  if (!banner) return;
+  banner.classList.remove('show');
+  banner.setAttribute('aria-hidden', 'true');
 }
 
 // Program filter
@@ -1856,7 +1962,10 @@ function goToAdmissions() {
   window.location.href = 'admissions/';
 }
 
-window.addEventListener('DOMContentLoaded', openEnrollmentModal);
+window.addEventListener('DOMContentLoaded', () => {
+  openEnrollmentModal();
+  showCookieConsent();
+});
 
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
