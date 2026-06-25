@@ -1713,8 +1713,8 @@ footer {
 
 <!-- ENROLLMENT MODAL -->
 <div class="enrollment-modal" id="enrollmentModal" aria-hidden="true" onclick="closeEnrollmentModal(event)">
-  <div class="enrollment-modal-panel" role="dialog" aria-modal="true" aria-labelledby="enrollmentModalTitle" onclick="goToAdmissions()">
-    <button class="enrollment-modal-close" onclick="closeEnrollmentModal(event)" aria-label="Close enrollment modal">×</button>
+  <div class="enrollment-modal-panel" role="dialog" aria-modal="true" aria-labelledby="enrollmentModalTitle" onclick="goToAdmissions(event)">
+    <button class="enrollment-modal-close" type="button" onclick="closeEnrollmentModal(event)" aria-label="Close enrollment modal">×</button>
     <div class="enrollment-modal-content">
       <span class="enrollment-modal-kicker">Ongoing Enrollment</span>
       <h3 class="enrollment-modal-title" id="enrollmentModalTitle">Enrollment is now open</h3>
@@ -1947,6 +1947,7 @@ function openEnrollmentModal() {
 
 function closeEnrollmentModal(event) {
   if (event) {
+    event.preventDefault();
     event.stopPropagation();
     if (event.target !== document.getElementById('enrollmentModal') && !event.target.classList.contains('enrollment-modal-close')) return;
   }
@@ -1957,7 +1958,8 @@ function closeEnrollmentModal(event) {
   document.body.style.overflow = '';
 }
 
-function goToAdmissions() {
+function goToAdmissions(event) {
+  if (event && event.target.closest('.enrollment-modal-close')) return;
   markEnrollmentModalSeen();
   window.location.href = 'admissions/';
 }
