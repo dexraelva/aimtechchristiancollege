@@ -1455,8 +1455,9 @@ footer {
 .enrollment-modal.open { display: flex; }
 .enrollment-modal-panel {
   width: min(560px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
-  overflow: hidden;
   border: 1px solid rgba(255,255,255,0.24);
   border-radius: 12px;
   background:
@@ -1532,6 +1533,21 @@ footer {
   color: var(--navy);
   font-weight: 800;
   box-shadow: 0 10px 30px rgba(201,162,39,0.28);
+}
+
+@media (max-width: 420px) {
+  .enrollment-modal {
+    padding: 14px;
+  }
+
+  .enrollment-modal-content {
+    padding: 28px 22px;
+  }
+
+  .enrollment-modal-close {
+    width: 44px;
+    height: 44px;
+  }
 }
 </style>
 </head>
