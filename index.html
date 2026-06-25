@@ -321,39 +321,19 @@ section p { color: #111111 !important; }
 
 /* ===== HERO ===== */
 .hero {
-  background: var(--hero-gradient);
+  background:
+    linear-gradient(90deg, rgba(13,27,62,0.76) 0%, rgba(26,58,143,0.54) 50%, rgba(46,127,212,0.22) 100%),
+    url("assets/images/homebg.svg") center right / cover no-repeat;
   color: var(--white);
   padding: 100px 0 80px;
   position: relative;
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(201,162,39,0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(46,127,212,0.15) 0%, transparent 40%);
-}
-
-.hero-cross {
-  position: absolute;
-  right: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.04;
-  font-size: 480px;
-  line-height: 1;
-  pointer-events: none;
-  font-weight: 900;
-}
-
 .hero-inner {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 60px;
+  grid-template-columns: minmax(0, 680px);
   align-items: center;
 }
 
@@ -402,34 +382,6 @@ section p { color: #111111 !important; }
 }
 
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 52px; }
-
-.hero-logo-float {
-  position: relative;
-  width: min(42vw, 460px);
-  min-width: 340px;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 24px 70px rgba(0,0,0,0.28);
-}
-
-.hero-logo-float::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(145deg, rgba(13,27,62,0.2) 0%, rgba(26,58,143,0.32) 52%, rgba(201,162,39,0.42) 100%),
-    linear-gradient(0deg, rgba(13,27,62,0.82) 0%, rgba(13,27,62,0.08) 52%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero-logo-float img {
-  width: 100%;
-  height: 520px;
-  display: block;
-  object-fit: cover;
-  transform: scale(1.02);
-}
 
 @keyframes floatLogo {
   0%, 100% { transform: translateY(0); }
@@ -1265,9 +1217,7 @@ footer {
   .accred-badges { width: 100%; gap: 10px; }
   .accred-badge { width: 100%; justify-content: flex-start; }
   .hero { padding: 64px 0 52px; }
-  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-logo-float { width: 100%; min-width: 0; }
-  .hero-logo-float img { height: 320px; }
+  .hero-inner { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .programs-grid { grid-template-columns: 1fr; }
   .modes-grid { grid-template-columns: 1fr; }
@@ -1293,7 +1243,6 @@ footer {
 @media (max-width: 420px) {
   .container { padding: 0 14px; }
   .hero h1 { font-size: 30px; }
-  .hero-logo-float img { height: 280px; }
   .page-tools-actions { gap: 6px; }
   .page-tool-btn { min-width: 0; padding: 8px 10px; }
 }
@@ -1503,7 +1452,7 @@ footer {
         <img src="assets/images/favicon5.png" alt="AIM Tech Christian College">
         <div class="nav-brand">
           <span class="nav-brand-main">AIM Tech Christian College</span>
-          <span class="nav-brand-sub">Faith · Knowledge · Service</span>
+          <span class="nav-brand-sub">Faith,  Knowledge,  Service</span>
         </div>
       </a>
       <ul class="nav-links">
@@ -1542,7 +1491,6 @@ footer {
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-cross">✝</div>
   <div class="container">
     <div class="hero-inner">
       <div class="hero-content">
@@ -1552,9 +1500,6 @@ footer {
           <a href="https://admission.aimtechchristiancollege.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold">✦ Enroll Now</a>
           <a href="programs/" class="btn btn-outline-white">Explore Programs</a>
         </div>
-      </div>
-      <div class="hero-logo-float">
-        <img src="assets/images/headerphoto.png" alt="AIM Tech Christian College students and campus life">
       </div>
     </div>
   </div>
@@ -1614,7 +1559,7 @@ footer {
           <img src="assets/images/favicon5.png" alt="AIM Tech Christian College">
           <div class="footer-brand-text">
             <span class="name">AIM Tech Christian College</span>
-            <span class="sub">Faith · Knowledge · Service</span>
+            <span class="sub">Faith, Knowledge, Excellence.</span>
           </div>
         </div>
         <p class="footer-tagline">Raising up godly leaders equipped with the Word of God and empowered by the Holy Spirit to transform the Church and the nations.</p>
